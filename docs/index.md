@@ -3,23 +3,25 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: 'SAMURUN'
+  text: 'A VitePress Site'
+  tagline: ถ้าหากมีอารมณ์และแรงบันดาลใจ จะกลับมาสร้างสรรค์เนื้อหาใหม่ๆ
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: เรื่องเดฟๆ
+      link: /create-react-app-2024
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: เข้าป่า
+      link: /อุทยานแห่งชาติภูกระดึง
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Coding
+    icon: 🧑‍💻
+    details: บ่นเรื่องโค้ดและแบ่งปันประสบการณ์การเขียนโปรแกรม
+  - title: Running
+    icon: 🏃‍♂️‍➡️
+    details: การแบ่งปันประสบการณ์การวิ่งที่เราตั้งใจ แต่สุดท้ายก็แค่ไปเดินเล่น รวมถึงการพยายามไม่ให้คนอื่นเห็นว่าเราหอบ
+  - title: Hiking
+    icon: 🥾
+    details: อยากหาที่เงียบๆนอนและสำรวจธรรมชาติ พร้อมกับการแบ่งปันเส้นทางเดินป่า (ที่อาจจะหลงทางไปอีกที่หนึ่ง)
 ---
-
