@@ -47,7 +47,7 @@ export default defineConfig({
         items: [{ text: 'เริ่มจาการเดิน', link: '/running' }],
       },
       {
-        text: 'Hikking',
+        text: 'Hiking',
         items: [
           { text: 'อุทยานแห่งชาติภูกระดึง', link: '/อุทยานแห่งชาติภูกระดึง' },
           { text: 'เขาหลวงสุโขทัย', link: '/เขาหลวงสุโขทัย' },
