@@ -1,22 +1,92 @@
-import { defineConfig } from 'vitepress';
+import { DefaultTheme, defineConfig } from 'vitepress';
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
+import { version } from '../../package.json';
+
+const description = 'A VitePress Site';
+
+const VERSIONS: (
+  | DefaultTheme.NavItemWithLink
+  | DefaultTheme.NavItemChildren
+)[] = [{ text: `v${version} (current)`, link: '/' }];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'SAMURUN',
   lang: 'th-TH',
-  description: 'A VitePress Site',
+  description: description,
   head: [
-    ['meta', { name: 'author', content: 'samurun' }],
     [
       'meta',
       {
-        name: 'keywords',
-        content: 'react, vitejs',
+        name: 'viewport',
+        content: 'width=device-width,initial-scale=1,user-scalable=no',
       },
     ],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.png' }],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/assets/elysia.png',
+      },
+    ],
+    [
+      'meta',
+      {
+        property: 'og:image',
+        content: 'https://samurun.com/assets/cover.jpg',
+      },
+    ],
+    [
+      'meta',
+      {
+        property: 'og:image:width',
+        content: '1920',
+      },
+    ],
+    [
+      'meta',
+      {
+        property: 'og:image:height',
+        content: '1080',
+      },
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:image',
+        content: 'https://samurun.com/assets/cover.jpg',
+      },
+    ],
+    [
+      'meta',
+      {
+        property: 'og:title',
+        content: 'samurun',
+      },
+    ],
+    [
+      'meta',
+      {
+        property: 'og:description',
+        content: description,
+      },
+    ],
   ],
   lastUpdated: true,
+  markdown: {
+    theme: {
+      light: 'github-light',
+      dark: 'github-dark',
+    },
+    codeTransformers: [transformerTwoslash()],
+  },
   themeConfig: {
     footer: {
       message: 'Released under the MIT License.',
@@ -28,9 +98,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'เรื่องเดฟๆ', link: '/create-react-app-2024' },
-      { text: 'Running', link: '/running' },
-      { text: 'Hiking', link: '/อุทยานแห่งชาติภูกระดึง' },
+      // { text: 'เรื่องเดฟๆ', link: '/create-react-app-2024' },
+      // { text: 'Running', link: '/running' },
+      // { text: 'Hiking', link: '/อุทยานแห่งชาติภูกระดึง' },
+      {
+        text: `v${version}`,
+        items: VERSIONS,
+      },
     ],
     sidebar: [
       {

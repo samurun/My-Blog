@@ -1,6 +1,6 @@
 {
   "name": "my-awesome-project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -10,5 +10,8 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "@shikijs/vitepress-twoslash": "^1.22.2"
   }
 }
