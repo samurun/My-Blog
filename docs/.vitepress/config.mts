@@ -1,13 +1,7 @@
-import { DefaultTheme, defineConfig } from 'vitepress';
+import { defineConfig } from 'vitepress';
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
-import { version } from '../../package.json';
 
 const description = 'A VitePress Site';
-
-const VERSIONS: (
-  | DefaultTheme.NavItemWithLink
-  | DefaultTheme.NavItemChildren
-)[] = [{ text: `v${version} (current)`, link: '/' }];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -101,10 +95,6 @@ export default defineConfig({
       // { text: 'เรื่องเดฟๆ', link: '/create-react-app-2024' },
       // { text: 'Running', link: '/running' },
       // { text: 'Hiking', link: '/อุทยานแห่งชาติภูกระดึง' },
-      {
-        text: `v${version}`,
-        items: VERSIONS,
-      },
     ],
     sidebar: [
       {
